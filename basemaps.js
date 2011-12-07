@@ -25,12 +25,12 @@ var sources = {
     migurskiFull: {
         desc: "Migurski (full)",
         zoomRange: [0, 20],
-        url: 'http://tile.stamen.com/terrain/{Z}/{X}/{Y}.jpg'
+        url: po.url('http://{S}.tile.stamen.com/terrain/{Z}/{X}/{Y}.jpg').hosts(["a", "b", "c", "d"])
     },
     migurskiBg: {
         desc: "Migurski (bg)",
         zoomRange: [0, 20],
-        url: 'http://tile.stamen.com/terrain-background/{Z}/{X}/{Y}.jpg'
+        url: po.url('http://{S}.tile.stamen.com/terrain-background/{Z}/{X}/{Y}.jpg').hosts(["a", "b", "c", "d"])
     },
     // http://maps.google.com/
     googleTerrain: {
