@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
+<title>Maps</title>
+<script type="text/javascript" src="d3.js"></script>
+<script type="text/javascript" src="polymaps.js"></script>
+<script type="text/javascript" src="basemaps.js"></script>
+<script type="text/javascript" src="Graticules.js"></script>
+<script type="text/javascript" src="map.js"></script>
+
+<style type="text/css">
+html, body { height: 100% }
+#map { min-height: 100%; }
+
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif; font-size: 12px;
+    overflow: hidden;
+    background-color: #888;
+}
+
+.compass .back { fill: #eee; fill-opacity: .8; }
+.compass .fore { stroke: #999; stroke-width: 1.5px; }
+.compass rect.back.fore {
+    fill: #999; fill-opacity: .3;
+    stroke: #eee; stroke-width: 1px; shape-rendering: crispEdges; }
+.compass .direction { fill: none; }
+.compass .chevron { fill: none; stroke: #999; stroke-width: 5px; }
+.compass .zoom .chevron { stroke-width: 4px; }
+.compass .active .chevron, .compass .chevron.active { stroke: #fff; }
+.compass.active .active .direction { fill: #999; }
+
+.graticules line {
+  stroke: #a4a;
+  stroke-opacity: 0.4;
+  shape-rendering: crisp-edges;
+}
+.graticules text {
+  fill: #a4a;
+}
+
+#buttons {
+    opacity: 0.8;
+    position: fixed; top: 4px; right: 4px;
+    width: 110px; text-align: center;
+    background: white;
+    border: solid 1px #444; margin: 4px; border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#buttons div { padding-bottom: 1px; padding-top: 1px }
+#buttonbox div:not(.spacer):hover { background: #ddd; }
+#buttons div:not(:last-child) { border-bottom: solid 1px #444; }
+#button-control { background: #444; width: 100%; color: #fff }
+
+</style>
+</head>
+
+<body>
+<div id="map" style="width: 100%; height: 100%;"></div>
+
+<!-- Floating button controls for switching layers -->
+<div id="buttons">
+<div id="button-control">Basemaps</div>
+<div id="buttonbox"></div>
+</div>
+
+<script type="text/javascript">
+window.onload = makeMap;
+</script>
+</body></html>
+
