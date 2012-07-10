@@ -6,7 +6,7 @@ var compass = null;
 var graticules = null;
 
 function openmaps() {
-    addBasemaps(["migurskiFull", "migurskiBg", "openCyclemap", "topOSM"]);
+    addBasemaps(["migurskiFull", "migurskiBg", "mapboxWarden", "openCyclemap", "topOSM"]);
 }
 
 function othermaps() {

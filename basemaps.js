@@ -135,6 +135,15 @@ var sources = {
         desc: "Acetate Preview",
         url: po.url("http://acetate.geoiq.com/tiles/acetate-hillshading/{Z}/{X}/{Y}.png"),
     },
+    // http://mapbox.com/blog/mapbox-streets-terrain/
+    mapboxWarden: {
+        desc: 'MapBox Warden',
+        url: po.url("http://{S}.tiles.mapbox.com/v3/mapbox.mapbox-warden/{Z}/{X}/{Y}.jpg").hosts(["a", "b", "c", "d"])
+    },
+    mapboxTerrain: {
+        desc: 'MapBox Terrain',
+        url: po.url("http://{S}.tiles.mapbox.com/v3/examples.map-4l7djmvo/{Z}/{X}/{Y}.jpg").hosts(["a", "b", "c", "d"])
+    },
 };
 // Populate the basemaps array
 for (var k in sources) {
