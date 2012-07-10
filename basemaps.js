@@ -23,12 +23,12 @@ var po = org.polymaps;
  */
 var sources = {
     migurskiFull: {
-        desc: "Migurski (full)",
+        desc: "Stamen (full)",
         zoomRange: [0, 20],
         url: po.url('http://{S}.tile.stamen.com/terrain/{Z}/{X}/{Y}.jpg').hosts(["a", "b", "c", "d"])
     },
     migurskiBg: {
-        desc: "Migurski (bg)",
+        desc: "Stamen (bg)",
         zoomRange: [0, 20],
         url: po.url('http://{S}.tile.stamen.com/terrain-background/{Z}/{X}/{Y}.jpg').hosts(["a", "b", "c", "d"])
     },
@@ -36,7 +36,7 @@ var sources = {
     googleTerrain: {
         desc: "Google Terrain",
         zoomRange: [0, 15],
-        url: 'http://mt0.google.com/vt/lyrs=t@126,r@137&hl=en&x={X}&y={Y}&z={Z}'
+        url: 'http://mts1.google.com/vt/lyrs=t@128,r@179150048&hl=en&x={X}&y={Y}&z={Z}'
     },
     // http://maps.google.com/
     googleSatellite: {

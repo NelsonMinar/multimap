@@ -101,7 +101,7 @@ function makeMap() {
 
     // Add some base maps
     openmaps();
-    // othermaps();   // disabled pending license review
+    othermaps();
 
     // Choose which map is visible first
     po.basemaps.migurskiFull.switchTo();
